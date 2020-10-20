@@ -1,0 +1,24 @@
+#nav
+{
+  background-color: MidnightBlue;
+  font-size: 1.5rem;
+  color:white;
+  font-weight: bold;
+}
+#searchbar
+{
+  padding-right: 30px;
+  border:1px solid black;
+  border-radius: 2rem;
+  width: 400px;
+  margin-left: 200px;
+}
+#Signin
+{
+  margin-left: 200px;
+}
+.fa-shopping-cart
+{
+  margin-right: 60px;
+  color: white;
+}
