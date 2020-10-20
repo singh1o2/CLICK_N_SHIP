@@ -1,2 +1,1 @@
-console.log("hi");
-alert("Hi there");
+console.log("On shopping cart page");
