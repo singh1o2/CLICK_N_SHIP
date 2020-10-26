@@ -4,6 +4,7 @@
   font-size: 1.5rem;
   color:white;
   font-weight: bold;
+  margin-bottom: 60px;
 }
 #searchbar
 {
@@ -12,6 +13,11 @@
   border-radius: 2rem;
   width: 400px;
   margin-left: 200px;
+}
+.sign
+{
+  color: white;
+
 }
 #Signin
 {
@@ -24,5 +30,31 @@
 }
 body
 {
-  background:  url("https://previews.123rf.com/images/arrow/arrow1508/arrow150800028/43966988-online-shopping-e-commerce-concept-background.jpg") ;
+   background: linear-gradient(to bottom, #9999ff 0%, #ccffcc 100%) no-repeat;
+   height: 100%;
+}
+.card
+{
+  margin : 50px;
+  height : 480px;
+}
+.card-group
+{
+  margin-bottom: 40px;
+}
+.card:hover
+{
+  webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+h1
+{
+  margin: 50px;
+}
+h7 {
+  visibility: hidden;
+}
+img{
+  height:300px;
 }
