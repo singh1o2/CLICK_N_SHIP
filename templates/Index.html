@@ -26,10 +26,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" id="Signin" href="#">Sign in</a>
+                <a class="sign nav-link" id="Signin" href="#">Sign in</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="Inventory" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="sign nav-link dropdown-toggle" href="Inventory" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Inventory
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -42,6 +42,100 @@
           </div>
           <a href="ShoppingCart"><i class="fas fa-shopping-cart"></i></a>
       </nav>
+
+
+      <h1>Electronics</h1>
+      <div class="card-group">
+        <div class="card">
+          <img src="{% static 'images/watch.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">1</h7>
+            <h5 class="card-title">Watch</h5>
+            <p class="card-text">$250</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/iPhone12.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">2</h7>
+            <h5 class="card-title">iPhone 12</h5>
+            <p class="card-text">$799</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/laptop.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">3</h7>
+            <h5 class="card-title">Laptop</h5>
+            <p class="card-text">$1299</p>
+             <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+      </div>
+
+      <h1>Home Supplies</h1>
+      <div class="card-group">
+        <div class="card">
+          <img src="{% static 'images/lamp.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">4</h7>
+            <h5 class="card-title">Lamp</h5>
+            <p class="card-text">$69</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/mattress.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">5</h7>
+            <h5 class="card-title">Mattress</h5>
+            <p class="card-text">$589</p>
+              <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/Blanket.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">6</h7>
+            <h5 class="card-title">Blanket</h5>
+            <p class="card-text">$155</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+      </div>
+
+      <h1>BOOKS</h1>
+      <div class="card-group">
+        <div class="card">
+          <img src="{% static 'images/Book1.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">7</h7>
+            <h5 class="card-title">In Another Life</h5>
+            <p class="card-text">$16</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/Book2.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">8</h7>
+            <h5 class="card-title">The Book of M</h5>
+            <p class="card-text">$9</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="{% static 'images/Book3.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">9</h7>
+            <h5 class="card-title">The Last Magician</h5>
+            <p class="card-text">$23</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
+        </div>
+      </div>
       <script  src="{% static 'Index.js' %}"> </script>
   </body>
 </html>
