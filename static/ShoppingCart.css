@@ -1,6 +1,28 @@
-.navbar {
-  border-color: black;
-  border-width: thick;
 
-  background-color: lightgray;
+.card-group
+{
+  display: none;
+  float: left;
+  width:33%;
+}
+
+h1
+{
+  display: none;
+  text-align: center;
+  padding : 200px;
+  padding-left: 350px;
+}
+
+#Amount
+{
+  width:91.5%;
+  height: 150px;
+  display: block;
+  text-align: center;
+  background: white;
+  font-size: 60px;
+  padding : 30px;
+  margin-left: 50px;
+  margin-RIGHT: 50px;
 }
