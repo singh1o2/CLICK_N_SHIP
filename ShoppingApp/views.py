@@ -11,3 +11,7 @@ def ShoppingCart(request): # for ShoppingCart
 def Inventory(request): # for Inventory
     dic2 = {'InventoryHead' : 'This is Inventory'}
     return render(request,'Inventory.html',context = dic2)
+
+def Product(request): # for Product
+    dic3 = {'ProductHead' : 'This is Products Page'}
+    return render(request,'Product.html',context = dic3)
