@@ -3,5 +3,6 @@ from ShoppingApp import views
 urlpatterns = [
     path('ShoppingCart/',views.ShoppingCart,name = 'ShoppingCart'),
     path('Inventory/',views.Inventory,name = 'Inventory'),
+    path('Product/',views.Product,name = 'Product'),
     path('',views.Index,name = 'Index')
 ]
