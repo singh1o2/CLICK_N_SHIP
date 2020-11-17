@@ -45,7 +45,7 @@
         <a href="../ShoppingCart"><i class="fas fa-shopping-cart"></i></a>
     </nav>
 
-    <form method="POST" > 
+    <form method="POST" >
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Submit">
