@@ -47,171 +47,78 @@
     </nav>
 
 
-
-
-
-
-
-
-
-<!--    <div class="Electronics">
     <button class="dropbtn">Electronics
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="Electronics-content">
-      <div class="row">
-        <div class="column">
-          <h3>Product 1</h3>
-          <a href="#">Img</a>
-          <a href="#">Add to cart</a>
-          <a href="#">Price</a>
-        </div>
-        <div class="column">
-          <h3>Product 2</h3>
-          <a href="#">Img</a>
-          <a href="#">Add to cart</a>
-          <a href="#">Price</a>
-        </div>
-        <div class="column">
-          <h3>Product 3</h3>
-          <a href="#">Img</a>
-          <a href="#">Add to cart</a>
-          <a href="#">Price</a>
-        </div>
-      </div>
-    </div>
-    </div>
-
-
-    <div class="Home-Supplies">                           <!--Home Supplies section
-    <button class="dropbtn">Home Supplies
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="Home-Supplies-content">
-      <div class="row">
-        <div class="column">                          <!--Products
-          <h3>Product 1</h3>
-          <a href="#">Img</a>
-          <a href="#">Add to cart</a>
-          <a href="#">Price</a>
-        </div>
-        <div class="column">
-          <h3>Product 2</h3>
-          <a href="#">Img</a>
-          <a href="#">Add to cart</a>
-          <a href="#">Price</a>
-        </div>
-        <div class="column">
-          <h3>Product 3</h3>
-          <a href="#">Img</a>
-          <a href="#">Add to cart</a>
-          <a href="#">Price</a>
-        </div>
-      </div>
-    </div>
-    </div>
-
-
-    </div>-->
-    <button class="dropbtn">Electronics
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="card-group " id="cardGroup" style="display : none;">
-      <div class="card">
-        <img src="{% static 'images/watch.jpg' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">1</h7>
-          <h5 class="card-title">Watch</h5>
-          <p class="card-text">$250</p>
-          <button class="btn btn-primary">Add to cart</a></button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="{% static 'images/iPhone12.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">2</h7>
-          <h5 class="card-title">iPhone 12</h5>
-          <p class="card-text">$799</p>
-          <button class="btn btn-primary">Add to cart</a></button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="{% static 'images/laptop.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">3</h7>
-          <h5 class="card-title">Laptop</h5>
-          <p class="card-text">$1299</p>
-           <button class="btn btn-primary">Add to cart</a></button>
-        </div>
-      </div>
-    </div>
-
-    <button class="dropbtn">Home Supplies
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="card-group"  style="display : none;">
-      <div class="card">
-        <img src="{% static 'images/lamp.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">4</h7>
-          <h5 class="card-title">Lamp</h5>
-          <p class="card-text">$69</p>
-          <button class="btn btn-primary">Add to cart</a></button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="{% static 'images/mattress.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">5</h7>
-          <h5 class="card-title">Mattress</h5>
-          <p class="card-text">$589</p>
+    <div class="card-group" id="cardGroup" style="display : none;">
+      {% if records%}
+        {% for r in records%}
+        {% if r.ProductCategory == 'E' %}
+        <div class="card">
+          <img src="{{ r.productImage.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">{{r.productId}}</h7>
+            <h5 class="card-title">{{r.productName}}</h5>
+            <p class="card-text">$ {{r.productPrice}}</p>
             <button class="btn btn-primary">Add to cart</a></button>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="{% static 'images/Blanket.jpg' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">6</h7>
-          <h5 class="card-title">Blanket</h5>
-          <p class="card-text">$155</p>
-          <button class="btn btn-primary">Add to cart</a></button>
+        {% else %}
+        {% endif %}
+        {% endfor %}
+      {% else %}
+        <p>No products at this time. Check back Later</p>
+      {% endif %}
+   </div>
+
+    <button class="dropbtn">Home Supplies
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="card-group" id="cardGroup" style="display : none;">
+      {% if records%}
+        {% for r in records%}
+          {% if r.ProductCategory == 'HS' %}
+        <div class="card">
+          <img src="{{ r.productImage.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">{{r.productId}}</h7>
+            <h5 class="card-title">{{r.productName}}</h5>
+            <p class="card-text">$ {{r.productPrice}}</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
         </div>
-      </div>
+        {% else %}
+        {% endif %}
+        {% endfor %}
+      {% else %}
+        <p>No products at this time. Check back Later</p>
+      {% endif %}
     </div>
 
     <button class="dropbtn">Books
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="card-group"  style="display : none;">
-      <div class="card">
-        <img src="{% static 'images/Book1.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">7</h7>
-          <h5 class="card-title">In Another Life</h5>
-          <p class="card-text">$16</p>
-          <button class="btn btn-primary">Add to cart</a></button>
+    <div class="card-group" id="cardGroup" style="display : none;">
+      {% if records%}
+        {% for r in records%}
+        {% if r.ProductCategory == 'B' %}
+        <div class="card">
+          <img src="{{ r.productImage.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h7 class="id">{{r.productId}}</h7>
+            <h5 class="card-title">{{r.productName}}</h5>
+            <p class="card-text">$ {{r.productPrice}}</p>
+            <button class="btn btn-primary">Add to cart</a></button>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="{% static 'images/Book2.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">8</h7>
-          <h5 class="card-title">The Book of M</h5>
-          <p class="card-text">$9</p>
-          <button class="btn btn-primary">Add to cart</a></button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="{% static 'images/Book3.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h7 class="id">9</h7>
-          <h5 class="card-title">The Last Magician</h5>
-          <p class="card-text">$23</p>
-          <button class="btn btn-primary">Add to cart</a></button>
-        </div>
-      </div>
+        {% else %}
+        {% endif %}
+        {% endfor %}
+      {% else %}
+        <p>No products at this time. Check back Later</p>
+      {% endif %}
     </div>
-    <script  src="{% static 'Inventory.js' %}"> </script>
-    <script  src="{% static 'Index.js' %}"> </script>
+      <script  src="{% static 'Index.js' %}"> </script>
+      <script  src="{% static 'Inventory.js' %}"> </script>
 </body>
 </html>
