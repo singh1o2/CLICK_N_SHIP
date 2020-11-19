@@ -58,10 +58,11 @@ $("body").bind("ajaxSend", function(elm, xhr, s){
 Products = document.querySelectorAll('.card');
 for(i=0;i<Products.length;i++)
 {
-    Button = Products[i].querySelector('button');
-    $(Button).click(function(e)
+    addToCart = Products[i].querySelector('#left');
+    viewProduct = Products[i].querySelector('#right');
+    $(addToCart).click(function(e)
     {
-      productName = this.parentElement.querySelector('.card-title').textContent;
+      productName = this.parentElement.parentElement.querySelector('.card-title').textContent;
       console.log(productName);
       e.preventDefault();
       $.ajax({
@@ -72,5 +73,25 @@ for(i=0;i<Products.length;i++)
         data: JSON.stringify(productName),
         datatype:'json'
       });
+    });
+
+      $(viewProduct).click(function(e)
+      {
+        productName = this.parentElement.parentElement.querySelector('.card-title').textContent;
+        e.preventDefault();
+        $.ajax({
+          headers: { "X-CSRFToken": csrf_token },
+          type:'POST',
+          csrfmiddlewaretoken: '{{ csrf_token }}',
+          url:'viewProduct/',
+          data: JSON.stringify(productName),
+          datatype:'json',
+          success: function()
+          {
+            window.location.href = "../viewProduct/";
+          }
+        });
+
+
     });
 }
