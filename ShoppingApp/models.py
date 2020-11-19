@@ -7,6 +7,8 @@ CATEGORY = (
     ('B', 'Books')
 )
 
+product = []
+index = -1
 
 class Product(models.Model):
     produtId =models.IntegerField(unique=True)
