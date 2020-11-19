@@ -1,17 +1,8 @@
 from django import forms
+from ShoppingApp.models import Product
 
-CATEGORY = (
-    ('E', 'Electronics'),
-    ('HS', 'HomeSupplies'),
-    ('B', 'Books')
-)
 
-class SellerForm(forms.Form):
-    produtId =forms.IntegerField()
-    productName = forms.CharField()
-    productPrice = forms.IntegerField()
-    productDescription = forms.CharField()
-    productSellerName = forms.CharField()
-    productColor = forms.CharField()
-    ProductCategory = forms.CharField()
-    productImage = forms.ImageField()
+class SellerForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields =['produtId','productName','productPrice','productDescription','productColor','productSellerName','productImage','ProductCategory',]
