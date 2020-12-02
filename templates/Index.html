@@ -17,16 +17,22 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2"  id = "searchbar" type="search" placeholder="What would like to buy today?">
-            <i class="fas fa-search"></i>
+          <form class="form-inline my-2 my-lg-0" action ="../viewProduct/" method="POST">
+            {% csrf_token %}
+            <input class="form-control mr-sm-2"  name = 'product'  id = "searchbar" type="search" placeholder="What would like to buy today?">
           </form>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:180px;">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="sign nav-link" id="Signin" href="#">Sign in</a>
-              </li>
+              {% if user.is_authenticated %}
+                <li class="nav-item" style="margin-left=20px;">
+                  <a class="sign nav-link" id="Logout" href="../logout/">Logout</a>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="sign nav-link" id="Login" href="../login/">Login</a>
+                </li>
+              {% endif %}
               <li class="nav-item dropdown">
                 <a class="sign nav-link dropdown-toggle" href="Inventory" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Inventory
