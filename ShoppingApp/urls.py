@@ -6,7 +6,9 @@ urlpatterns = [
     path('addToCart/',views.addToCart,name = 'addToCart'),
     path('Seller/',views.Seller,name = 'Seller'),
     path('deletefromCart/',views.deletefromCart,name = 'deletefromCart'),
-    #path('Products/',views.Products,name = 'Product'),
     path('viewProduct/',views.viewProduct,name = 'viewProduct'),
-    path('',views.Index,name = 'Index')
+    path('',views.Index,name = 'Index'),
+    path('register/',views.Register,name = 'Register'),
+    path('login/',views.userLogin,name = 'userLogin'),
+    path('logout/',views.userLogout,name = 'userLogout')
 ]
