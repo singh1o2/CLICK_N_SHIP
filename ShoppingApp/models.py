@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 CATEGORY = (
     ('E', 'Electronics'),
@@ -23,3 +23,6 @@ class Product(models.Model):
 class Cart(models.Model):
     product = models.ForeignKey( Product, on_delete=models.CASCADE)
     productQuantity = models.IntegerField()
+
+class User(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
