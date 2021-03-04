@@ -7,7 +7,6 @@ Collaborated with a team to build a full-stack web application where users can b
 
 # Complete Information:
 ![Alt text](data/Slide1.jpg)
-![Alt text](data/Slide2.jpg)
 ![Alt text](data/Slide3.jpg)
 ![Alt text](data/Slide4.jpg)
 ![Alt text](data/Slide5.jpg)
