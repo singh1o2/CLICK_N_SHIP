@@ -1,10 +1,11 @@
 # CLICK_N_SHIP
 Collaborated with a team to build a full-stack web application where users can buy and sell products. Build the user interface using HTML templates and database using Django and SQL. Planned to launch demonetized version of the website in the future.
 
-Sample:
+# Sample:
+
 ![Alt text](data/ezgif.com-gif-maker.gif)
 
-Complete Information:
+# Complete Information:
 ![Alt text](data/Slide1.jpg)
 ![Alt text](data/Slide2.jpg)
 ![Alt text](data/Slide3.jpg)
